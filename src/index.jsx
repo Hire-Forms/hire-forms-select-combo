@@ -21,12 +21,13 @@ class SelectCombo extends React.Component {
 			this.setState({
 				value: '',
 			});
+			this.refs.select.hideOptions();
 		}
 	}
 
 	render() {
 		return (
-			<Select {...this.props}>
+			<Select {...this.props} ref="select">
 				<Input
 					onChange={this.handleChange.bind(this)}
 					onKeyDown={this.handleKeyDown.bind(this)}
