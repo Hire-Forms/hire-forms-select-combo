@@ -1,0 +1,51 @@
+{
+  "name": "hire-forms-select-combo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build/index.js",
+  "scripts": {
+    "bump": "hi-bump",
+    "start": "scripts/watch.sh",
+    "test": "mocha --compilers js:babel/register --recursive test/*.js",
+    "test:watch": "nodemon -x \"mocha --compilers js:babel/register --recursive --watch test/*.js\" -w test -w build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Hire-Forms/hire-forms-select.git"
+  },
+  "author": "gijsjan.brouwer@huygens.knaw.nl (https://github.com/Gijsjan)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hire-Forms/hire-forms-select/issues"
+  },
+  "homepage": "https://github.com/Hire-Forms/hire-forms-select",
+  "peerDependencies": {
+    "classnames": "^2.1.2",
+    "react": "^15.0.1",
+    "react-dom": "^15.0.1"
+  },
+  "devDependencies": {
+    "babel": "^5.8.12",
+    "babel-core": "^5.8.12",
+    "babel-eslint": "^6.0.4",
+    "babel-plugin-object-assign": "^1.2.1",
+    "babelify": "^6.1.3",
+    "classlist-polyfill": "^1.0.2",
+    "derequire": "^2.0.2",
+    "eslint": "^2.9.0",
+    "eslint-config-airbnb": "^9.0.1",
+    "eslint-plugin-import": "^1.7.0",
+    "eslint-plugin-jsx-a11y": "^1.2.0",
+    "eslint-plugin-react": "^5.0.1",
+    "hi-bump": "^1.1.1",
+    "jsdom": "^5.6.1",
+    "mocha": "^2.2.5",
+    "nodemon": "^1.4.0",
+    "should": "^7.0.2",
+    "watchify": "^3.3.0"
+  },
+  "dependencies": {
+    "hire-forms-input": "*",
+    "hire-forms-select": "*"
+  }
+}
