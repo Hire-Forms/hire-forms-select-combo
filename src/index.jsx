@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import Select from 'hire-forms-select';
 import Input from 'hire-forms-input';
 
@@ -11,8 +11,8 @@ class SelectCombo extends React.Component {
 		};
 	}
 
-	handleChange(value, a) {
-		this.setState({ value: value });
+	handleChange(value) {
+		this.setState({ value });
 	}
 
 	handleKeyDown(ev) {
@@ -31,13 +31,21 @@ class SelectCombo extends React.Component {
 				<Input
 					onChange={this.handleChange.bind(this)}
 					onKeyDown={this.handleKeyDown.bind(this)}
-					placeholder={this.props.inputPlaceholder ? this.props.inputPlaceholder : 'Add'}
-					style={{width: '100%'}}
+					placeholder={this.props.inputPlaceholder}
+					style={{ width: '100%' }}
 					value={this.state.value}
 				/>
 			</Select>
 		);
 	}
 }
+SelectCombo.propTypes = {
+	inputPlaceholder: PropTypes.string,
+	onChange: PropTypes.func,
+};
+
+SelectCombo.defaultProps = {
+	inputPlaceholder: 'Add',
+};
 
 export default SelectCombo;
