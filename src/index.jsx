@@ -3,19 +3,15 @@ import Select from 'hire-forms-select';
 import Input from 'hire-forms-input';
 
 class SelectCombo extends React.Component {
-	constructor(props) {
-		super(props);
-
-		this.state = {
-			value: '',
-		};
+	state = {
+		value: '',
 	}
 
-	handleChange(value) {
+	handleChange = (value) => {
 		this.setState({ value });
 	}
 
-	handleKeyDown(ev) {
+	handleKeyDown = (ev) => {
 		if (ev.keyCode === 13) {
 			this.props.onChange(this.state.value);
 			this.setState({
@@ -29,8 +25,8 @@ class SelectCombo extends React.Component {
 		return (
 			<Select {...this.props} ref="select">
 				<Input
-					onChange={this.handleChange.bind(this)}
-					onKeyDown={this.handleKeyDown.bind(this)}
+					onChange={this.handleChange}
+					onKeyDown={this.handleKeyDown}
 					placeholder={this.props.inputPlaceholder}
 					style={{ width: '100%' }}
 					value={this.state.value}
